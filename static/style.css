@@ -1,0 +1,27 @@
+body{
+background-color: light;
+}
+
+.like-button{
+    margin-top: -30px;
+    padding-bottom:5px;
+}
+
+.card-header{
+margin-bottom:2px;
+padding-bottom:0px;
+}
+
+.card-body{
+padding-bottom: 0px;
+padding-top: 1px;
+}
+
+.post-link{
+padding-top:0px;
+}
+
+.jumbotron{
+padding-bottom:15px;
+padding-top:15px;
+}
