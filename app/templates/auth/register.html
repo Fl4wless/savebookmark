@@ -1,0 +1,86 @@
+{% extends "base.html"%}
+{% block head %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="../static/register.css">
+{% endblock head %}
+
+{% block content %}
+
+    <form class="form-signin" method="POST">
+       {{ form.hidden_tag() }}
+      <div class="text-center mb-4">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">SaveOrShare</h1>
+        <p>Welcome to <code>SaveOrShare.</code>Please fill up the form to register an accout. <a href="https://caniuse.com/#feat=css-placeholder-shown">If you already have an account, please login.</a></p>
+      </div>
+
+
+      <div class="form-label-group">
+        {% if form.username.errors %}
+          {{form.username(class="form-control is-invalid")}}
+          <div class="invalid-feedback">
+            {% for error in form.username.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{form.username(class="form-control")}}
+        {% endif %}
+        <label>Username</label>
+      </div>
+
+
+      <div class="form-label-group">
+        {% if form.email.errors %}
+          {{form.email(class="form-control is-invalid")}}
+          <div class="invalid-feedback">
+            {% for error in form.email.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{form.email(class="form-control")}}
+        {% endif %}
+        <label>Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        {% if form.password.errors %}
+          {{form.password(class="form-control is-invalid")}}
+          <div class="invalid-feedback">
+            {% for error in form.password.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{form.password(class="form-control")}}
+        {% endif %}
+        <label>Password</label>
+      </div>
+
+      <div class="form-label-group">
+        {% if form.retype_password.errors %}
+          {{form.retype_password(class="form-control is-invalid")}}
+          <div class="invalid-feedback">
+            {% for error in form.retype_password.errors %}
+              <span>{{ error }}</span>
+            {% endfor %}
+          </div>
+        {% else %}
+          {{form.retype_password(class="form-control")}}
+        {% endif %}
+        <label>Retype Password</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+        {{form.submit(class="btn btn-lg btn-primary btn-block")}}
+    </form>
+{% endblock content%}
