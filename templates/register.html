@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+{% block head %}
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/floating-labels/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="../static/register.css">
+{% endblock head %}
+
+{% block content %}
+    <form class="form-signin">
+      <div class="text-center mb-4">
+        <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">SaveOrShare</h1>
+        <p>Welcome to <code>SaveOrShare.</code>Please fill up the form to register an accout. <a href="https://caniuse.com/#feat=css-placeholder-shown">If you already have an account, please login.</a></p>
+      </div>
+
+      <div class="form-label-group">
+        <input type="email" class="form-control" placeholder="Username" required autofocus>
+        <label>Username</label>
+      </div>
+      <div class="form-label-group">
+        <input type="email" class="form-control" placeholder="Email address" required autofocus>
+        <label>Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" class="form-control" placeholder="Password" required>
+        <label>Password</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" class="form-control" placeholder="Retype Password" required>
+        <label>Retype Password</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    </form>
+{% endblock content%}
